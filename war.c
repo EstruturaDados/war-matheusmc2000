@@ -74,10 +74,8 @@ void atacar(Territorio *atacante, Territorio *defensor) {
 /*
  * Função: verificarMissao
  * Objetivo: verificar se a missão do jogador foi cumprida.
- * (Lógica simples inicial — pode ser expandida conforme regras do jogo)
  */
 int verificarMissao(char *missao, Territorio *mapa, int tamanho) {
-    // Exemplo: se a missão for "Conquistar 3 territórios seguidos", verificar se há 3 territórios da mesma cor.
     if (strstr(missao, "Conquistar 3 territórios")) {
         int consecutivos = 0;
         for (int i = 0; i < tamanho - 1; i++) {
@@ -90,7 +88,6 @@ int verificarMissao(char *missao, Territorio *mapa, int tamanho) {
         }
     }
 
-    // Exemplo: missão de eliminar tropas vermelhas
     if (strstr(missao, "Eliminar todas as tropas vermelhas")) {
         for (int i = 0; i < tamanho; i++) {
             if (strcmp(mapa[i].cor, "vermelha") == 0 && mapa[i].tropas > 0)
