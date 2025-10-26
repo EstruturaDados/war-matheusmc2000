@@ -180,7 +180,7 @@ int main() {
         exibirMapa(mapa, totalTerritorios);
 
         if (verificarMissao(missaoJogador, mapa, totalTerritorios)) {
-            printf("\n🏆 Missão cumprida! Você venceu o jogo!\n");
+            printf("\nMissão cumprida! Você venceu o jogo!\n");
             break;
         }
     }
